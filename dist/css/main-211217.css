@@ -1,0 +1,289 @@
+body {
+  background: url(../../1920.png) 50% 0 no-repeat;
+}
+
+body #hd_wrap,
+body #main {
+  opacity: 0.7;
+}
+
+.container {
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+.mVisual {
+  position: relative;
+  z-index: 1;
+  max-width: 1520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mVisual::before {
+  content: "";
+  position: absolute;
+  top: 42px;
+  right: -60px;
+  z-index: 10;
+  display: block;
+  width: 193px;
+  height: 193px;
+  background: url(../../images/main/mVisual-deco1.png) 0 0/contain no-repeat;
+}
+
+.mVisual .list {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mVisual .list a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 690px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mVisual .list .txt-area {
+  display: inline-block;
+  margin: 152px auto 0;
+}
+
+.mVisual .list .point {
+  display: block;
+  position: relative;
+  width: 760px;
+  margin: 0 auto 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+.mVisual .list .point::before, .mVisual .list .point::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: 230px;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.mVisual .list .point::before {
+  left: 0;
+}
+
+.mVisual .list .point::after {
+  right: 0;
+}
+
+.mVisual .list .tit {
+  display: block;
+  font-size: 3em;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #fff;
+  font-weight: 300;
+}
+
+.mVisual .list .tit span {
+  font-weight: 900;
+}
+
+.mVisual .list .txt {
+  display: block;
+  width: 530px;
+  margin: 30px 0 0 30px;
+  color: #555;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -1px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.mVisual .list .slick-arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 1;
+  font-size: 0;
+}
+
+.mVisual .list .slick-arrow::before {
+  content: "";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  color: #fff;
+  font-size: 40px;
+}
+
+.mVisual .list .slick-dots {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 280px;
+  font-size: 0;
+  text-align: left;
+  margin-left: -560px;
+}
+
+.mVisual .list .slick-dots li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.mVisual .list .slick-dots li button {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  text-indent: -999px;
+  font-size: 0;
+}
+
+.mVisual .list .slick-dots li button::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+  background: #bbbcc1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0.5;
+}
+
+.mVisual .list .slick-dots li.slick-active button::before {
+  background: #fff;
+  opacity: 1;
+}
+
+.mVisual .list_control {
+  position: absolute;
+  left: 0;
+  bottom: 280px;
+  padding: 5px;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+
+.mVisual .list_control button {
+  display: block;
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+  text-indent: -999px;
+}
+
+.mVisual .list_control .btn_play {
+  background: url(../../images/common/btn_play_white.png) no-repeat center;
+}
+
+.mVisual .list_control .btn_pause {
+  background: url(../../images/common/btn_pause_white.png) no-repeat center;
+}
+
+.mVisual .list .slick-arrow {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: auto;
+  background-color: #093e7e;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.mVisual .list .slick-arrow::before {
+  font-size: 30px;
+}
+
+.mVisual .list .slick-prev {
+  width: 46px;
+  height: 46px;
+  right: 138px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.mVisual .list .slick-prev::before {
+  content: "\f104";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+}
+
+.mVisual .list .slick-next {
+  width: 78px;
+  height: 46px;
+  right: 0;
+  background-color: #e4022e;
+}
+
+.mVisual .list .slick-next::before {
+  content: "\f105";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  margin-right: -20px;
+}
+
+.mVisual .list .slick-next::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 23px;
+  width: 50px;
+  height: 1px;
+  background-color: #fff;
+}
+
+.mVisual .custom_paging {
+  position: absolute;
+  bottom: 0;
+  right: 78px;
+  width: 60px;
+  height: 46px;
+  background-color: #e4022e;
+}
+
+.mVisual .custom_paging li {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+
+.mVisual .custom_paging li.slick-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mVisual .custom_paging li span {
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+/*# sourceMappingURL=main-211217.css.map */
