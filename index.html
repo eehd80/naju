@@ -39,36 +39,56 @@
         <link rel="stylesheet" href="./dist/css/common.css" />
         <link rel="stylesheet" href="./dist/css/main-211217.css" />
 
-        <script type="text/javascript" src="https://naju.museum.go.kr/js/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="https://naju.museum.go.kr/js/jquery.easing.1.3.js"></script>
-        <script type="text/javascript" src="https://naju.museum.go.kr/js/jquery.touchSlider.js"></script>
-        <script type="text/javascript" src="https://naju.museum.go.kr/tmpl/kr/js/jquery.gnb.js"></script>
-        <script type="text/javascript" src="https://naju.museum.go.kr/tmpl/kr/js/template-ui.js"></script>
-        <script type="text/javascript" src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
+        <script src="https://naju.museum.go.kr/js/jquery-1.7.2.min.js"></script>
+        <script src="https://naju.museum.go.kr/js/jquery.easing.1.3.js"></script>
+        <script src="https://naju.museum.go.kr/js/jquery.touchSlider.js"></script>
+        <script src="https://naju.museum.go.kr/tmpl/kr/js/jquery.gnb.js"></script>
+        <script src="https://naju.museum.go.kr/tmpl/kr/js/template-ui.js"></script>
+        <script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script>
         <script src="./dist/vendor/slick/slick.min.js"></script>
-        <script type="text/javascript" src="https://naju.museum.go.kr/js/kr/content.js"></script>
-        <script type="text/javascript" src="https://naju.museum.go.kr/js/kr/calendar.js"></script>
-        <script type="text/javascript" src="https://naju.museum.go.kr/js/javascript.js"></script>
-        <script type="text/javascript" src="https://naju.museum.go.kr/js/flash.js"></script>
-        <script type="text/javascript" src="https://naju.museum.go.kr/js/kr/lnb.js"></script>
+        <script src="https://naju.museum.go.kr/js/kr/content.js"></script>
+        <script src="https://naju.museum.go.kr/js/kr/calendar.js"></script>
+        <script src="https://naju.museum.go.kr/js/javascript.js"></script>
+        <script src="https://naju.museum.go.kr/js/flash.js"></script>
+        <script src="https://naju.museum.go.kr/js/kr/lnb.js"></script>
         <script src="./dist/js/main.js"></script>
         <!--[if lt IE 9]>
             <script src="./dist/vendor/html5.js"></script>
             <script src="./dist/vendor/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body id="main">
         <!-- skipnavigation -->
         <div class="skipnavigation">
             <ul>
-                <li><a href="#main">본문 바로가기</a></li>
                 <li><a href="#gnb">주메뉴 바로가기</a></li>
+                <li><a href="#contents">본문 바로가기</a></li>
             </ul>
         </div>
         <!-- //skipnavigation -->
 
         <!-- 헤더 -->
         <div id="hd_wrap">
+            <!-- 글로벌메뉴 -->
+            <div class="gnb-util">
+                <ul class="util-left">
+                    <li class="open">오늘은 <span>개관일</span>입니다.</li>
+                    <li class="time">관람시간 <em>10:00 ~ 18:00</em></li>
+                </ul>
+                <ul class="util-right">
+                    <li>
+                        <a href="#">어린이박물관</a>
+                    </li>
+                    <li>
+                        <a href="#">온라인박물관</a>
+                    </li>
+                    <li class="booking">
+                        <a class="tog_search sch_open on" href="#none">통합예약</a>
+                    </li>
+                    <li class="pop"><a href="#">POPUPZONE</a></li>
+                </ul>
+            </div>
+            <!-- //글로벌메뉴 -->
             <div id="header">
                 <!-- 로고 -->
                 <h1 class="logo">
@@ -78,47 +98,7 @@
                     </a>
                 </h1>
                 <!-- //로고 -->
-                <!-- 글로벌메뉴 -->
-                <div class="lnb">
-                    <ul>
-                        <li>
-                            <a href="/_prog/_member/index.php?site_dvd_cd=kr&amp;menu_dvs_cd=070103"
-                                ><img src="https://naju.museum.go.kr//images/common/icon_ext/ico_lnb1.png" alt="아이콘" />회원가입</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/_prog/_realname/?site_dvs_cd=kr&amp;menu_dvs_cd=070101"
-                                ><img src="https://naju.museum.go.kr//images/common/icon_ext/ico_lnb2.png" alt="아이콘" />로그인</a
-                            >
-                        </li>
-                        <li class="sel_lang">
-                            <a href="#"><img src="https://naju.museum.go.kr/images/common/icon_ext/ico_lnb3.png" alt="아이콘" />LANGUAGE</a>
-                            <ul>
-                                <li>
-                                    <a href="/html/en/" target="_blank" title="새창으로 열림">ENGLISH</a>
-                                </li>
-                                <li>
-                                    <a href="/html/cn/" target="_blank" title="새창으로 열림"></a>
-                                </li>
-                                <li>
-                                    <a href="/html/jp/" target="_blank" title="새창으로 열림"></a>
-                                </li>
-                            </ul>
-                            <script>
-                                $(function () {
-                                    var togLang = function () {
-                                        $(".sel_lang > a").click(function () {
-                                            $(this).siblings("ul").toggle();
-                                        });
-                                    };
-                                    togLang();
-                                });
-                            </script>
-                        </li>
-                        <li class="lnb_cust"><a href="/html/kr/guide/guide_0705.html">포털메뉴보기</a></li>
-                    </ul>
-                </div>
-                <!-- //글로벌메뉴 -->
+
                 <!-- 메뉴 -->
                 <div id="hd-gnb">
                     <h2>주메뉴영역</h2>
@@ -148,6 +128,27 @@
                         </li>
                         <li class="toppadd_4">
                             <a rel="ov" href="/_prog/edu/?menu_dvs_cd=0301">교육 / 행사</a>
+                            <ul id="tm_1th_3">
+                                <li><a href="/_prog/edu/?menu_dvs_cd=0301" class="">이달의일정</a></li>
+                                <li>
+                                    <a href="/_prog/edu/index.php?mode=V&amp;gubun=8&amp;menu_dvs_cd=03020101" class="">교육프로그램</a>
+                                </li>
+                                <li><a href="/_prog/edu/index.php?mode=V&amp;gubun=6&amp;menu_dvs_cd=03030101" class="">문화행사</a></li>
+                                <li><a href="/_prog/edu/index.php?mode=A&amp;menu_dvs_cd=0304" class="">예약조회</a></li>
+                                <li>
+                                    <a href="/_prog/_board/?code=video_0407&amp;site_dvs_cd=kr&amp;menu_dvs_cd=0305" class=""
+                                        >온라인 학습 영상 자료실</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="/_prog/_board/?code=edu_hooki&amp;site_dvs_cd=kr&amp;menu_dvs_cd=030601" class=""
+                                        >교육/행사후기</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="toppadd_4">
+                            <a rel="ov" href="/_prog/edu/?menu_dvs_cd=0301">통합예약</a>
                             <ul id="tm_1th_3">
                                 <li><a href="/_prog/edu/?menu_dvs_cd=0301" class="">이달의일정</a></li>
                                 <li>
@@ -282,8 +283,43 @@
                         });
                     </script>
                 </div>
+
+                <div class="gnb-right">
+                    <ul>
+                        <li class="sel_lang">
+                            <a href="#"><img src="https://naju.museum.go.kr/images/common/icon_ext/ico_lnb3.png" alt="아이콘" />KOR</a>
+                            <ul>
+                                <li>
+                                    <a href="/html/en/" target="_blank" title="새창으로 열림">ENG</a>
+                                </li>
+                                <li>
+                                    <a href="/html/cn/" target="_blank" title="새창으로 열림">日本語</a>
+                                </li>
+                                <li>
+                                    <a href="/html/jp/" target="_blank" title="새창으로 열림">中文</a>
+                                </li>
+                            </ul>
+                            <script>
+                                $(function () {
+                                    var togLang = function () {
+                                        $(".sel_lang > a").click(function () {
+                                            $(this).siblings("ul").toggle();
+                                        });
+                                    };
+                                    togLang();
+                                });
+                            </script>
+                        </li>
+                        <li>
+                            <a href="#" class="link-search">검색</a>
+                        </li>
+                        <li>
+                            <a href="#" class="link-ham">전체메뉴</a>
+                        </li>
+                    </ul>
+                </div>
                 <!-- //메뉴 -->
-                <a class="tog_search sch_open" href="#none">통합검색·예약</a>
+                <!-- <a class="tog_search sch_open" href="#none">통합검색·예약</a> -->
             </div>
             <div class="nav_bg">
                 <div class="nav_deco">
@@ -387,7 +423,7 @@
         <!-- //헤더 -->
 
         <!-- 메인 -->
-        <div id="main">
+        <div id="contents">
             <!-- 메인 슬라이드 -->
             <div class="mVisual">
                 <div class="list">
@@ -447,16 +483,16 @@
             <!-- 박물관 정보 -->
             <div class="mInfo">
                 <div class="container">
-                    <div class="blind">자연속의 열린 문화공간 국립나주박물관</div>
-                    <div class="info">
-                        <dl>
+                    <div class="info-tit">자연속의 열린 문화공간 국립나주박물관</div>
+                    <div class="sec-info">
+                        <dl class="lst-info">
                             <dt>관람시간</dt>
                             <dd>
-                                평일(월요일 제외)
-                                <em>09:00 ~ 18:00</em>
+                                <strong>평일(월요일 제외)</strong>
+                                <em> 09:00 ~ 18:00</em>
                             </dd>
                             <dd>
-                                주말, 공휴일
+                                <strong>주말, 공휴일</strong>
                                 <em>09:00 ~ 19:00</em>
                             </dd>
                             <dd class="desc">
@@ -464,17 +500,893 @@
                                 * 입장은 마감시간 30분 전까지 가능합니다.
                             </dd>
                         </dl>
-                        <dl>
+                        <dl class="lst-info">
                             <dt>휴관일</dt>
-                            <dd>
-                                1월 1일, 설날 · 추석 당일,
-                                <em>매주 월요일</em>
-                            </dd>
+                            <dd>1월 1일, 설날 · 추석 당일, <em>&nbsp;매주 월요일</em></dd>
                         </dl>
+                    </div>
+                    <div class="tab-info tab-wrap">
+                        <div class="successiveTab">
+                            <button class="active">공지사항</button>
+                            <button>보도자료</button>
+                        </div>
+                        <div class="successiveWrap tabs">
+                            <div class="tab active">
+                                <h2 class="blind">공지사항</h2>
+                                <ul class="lst-">
+                                    <li class="new">
+                                        <a href="#none">
+                                            <span> 핑크뮬리 인증 이벤트 - 우리 핑크뮬리 보러가자 </span>
+                                            <em class="time">2021.09.29</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <span>[공지] 국립나주박물관 특별전 도록 『금은보다 귀한 옥]</span>
+                                            <em class="time">2021.09.29</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <span>[공지] 박물관 관람 안내</span>
+                                            <em class="time">2021.09.29</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="link-more">더보기</a>
+                            </div>
+                            <div class="tab">
+                                <h2 class="blind">보도자료</h2>
+                                <ul class="lst-">
+                                    <li>
+                                        <a href="#none">
+                                            <span>[공지] 국립나주박물관 특별전 도록 『금은보다 귀한 옥]</span>
+                                            <em class="time">2021.09.29</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <span>[공지] 박물관 관람 안내</span>
+                                            <em class="time">2021.09.29</em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <span> 핑크뮬리 인증 이벤트 - 우리 핑크뮬리 보러가자 </span>
+                                            <em class="time">2021.09.29</em>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="link-more">더보기</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- //박물관 정보 -->
+            <!-- 문화행사 -->
+            <div id="event" class="mProgram">
+                <div class="container">
+                    <h2 class="sec-tit"><span>문화 · 행사</span></h2>
+                    <div class="slide-program">
+                        <a href="#">
+                            <div class="thumb">
+                                <em class="scab red">예정</em>
+                                <img src="./images/main/event-thumb1.jpg" alt="" />
+                            </div>
+                            <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                            <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                        </a>
+                        <a href="#">
+                            <div class="thumb">
+                                <em class="scab red">진행중</em>
+                                <img src="./images/main/event-thumb2.jpg" alt="" />
+                            </div>
+                            <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                            <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                        </a>
+                        <a href="#">
+                            <div class="thumb">
+                                <em class="scab">마감</em>
+                                <img src="./images/main/event-thumb3.jpg" alt="" />
+                            </div>
+                            <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                            <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                        </a>
+                        <a href="#">
+                            <div class="thumb">
+                                <em class="scab">마감</em>
+                                <img src="./images/main/event-thumb4.jpg" alt="" />
+                            </div>
+                            <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                            <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                        </a>
+                        <a href="#">
+                            <div class="thumb">
+                                <em class="scab">마감</em>
+                                <img src="./images/main/event-thumb1.jpg" alt="" />
+                            </div>
+                            <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                            <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                        </a>
+                        <a href="#">
+                            <div class="thumb">
+                                <em class="scab">마감</em>
+                                <img src="./images/main/event-thumb2.jpg" alt="" />
+                            </div>
+                            <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                            <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                        </a>
+                        <a href="#">
+                            <div class="thumb">
+                                <em class="scab">마감</em>
+                                <img src="./images/main/event-thumb3.jpg" alt="" />
+                            </div>
+                            <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                            <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                        </a>
+                        <a href="#">
+                            <div class="thumb">
+                                <em class="scab">마감</em>
+                                <img src="./images/main/event-thumb4.jpg" alt="" />
+                            </div>
+                            <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                            <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                        </a>
+                    </div>
+                    <a href="#" class="link-more">더보기</a>
+                </div>
+            </div>
+            <!-- //문화행사 -->
+            <!-- 교육프로그램 -->
+            <div id="program" class="mProgram">
+                <div class="container">
+                    <h2 class="sec-tit"><span>교육프로그램</span></h2>
+                    <div class="tab-wrap">
+                        <div class="successiveTab">
+                            <button class="active">전체</button>
+                            <button>가족</button>
+                            <button>어린이/청소년</button>
+                            <button>문화나눔</button>
+                            <button>일반인</button>
+                            <button>방학교육</button>
+                            <button>문화가 있는 날</button>
+                            <button>어린이체험놀이터</button>
+                            <button>어린이 문화재그리기 대회</button>
+                        </div>
+                        <div class="successiveWrap tabs">
+                            <div class="tab active">
+                                <h2 class="blind">전체</h2>
+                                <div class="slide-program">
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">예정</em>
+                                            <img src="./images/main/program-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 교육] 커~다란 독널이야</strong>
+                                        <p class="txt">대상 <span>|</span> 어린이</p>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">진행중</em>
+                                            <img src="./images/main/program-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">반짝반짝, 금동관 이야기</strong>
+                                        <p class="txt">대상 <span>|</span> 어린이</p>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/program-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">온라인 문화나눔 교육</strong>
+                                        <p class="txt">대상 <span>|</span> 어린이</p>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/program-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">특별전 연계 온라인 교육] 옛 부엌이야기 - 2회차</strong>
+                                        <p class="txt">대상 <span>|</span> 어린이</p>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/program-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">대상 <span>|</span> 어린이</p>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/program-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">대상 <span>|</span> 어린이</p>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/program-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">대상 <span>|</span> 어린이</p>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/program-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">대상 <span>|</span> 어린이</p>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <h2 class="blind">가족</h2>
+                                <div class="slide-program">
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">예정</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">진행중</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <h2 class="blind">어린이/청소년</h2>
+                                <div class="slide-program">
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">예정</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">진행중</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <h2 class="blind">문화나눔</h2>
+                                <div class="slide-program">
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">예정</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">진행중</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <h2 class="blind">일반인</h2>
+                                <div class="slide-program">
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">예정</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">진행중</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <h2 class="blind">방학교육</h2>
+                                <div class="slide-program">
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">예정</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">진행중</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <h2 class="blind">문화가 있는 날</h2>
+                                <div class="slide-program">
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">예정</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">진행중</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <h2 class="blind">어린이체험놀이터</h2>
+                                <div class="slide-program">
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">예정</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">진행중</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <h2 class="blind">어린이 문화재그리기 대회</h2>
+                                <div class="slide-program">
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">예정</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab red">진행중</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb1.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 10월 공연] 목수장이 엘리</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.10.30 ~ 2021.10.31</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb2.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 추석맞이 특별공연] 나무늘보 릴렉스</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb3.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 가방 들어주는 아이</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <em class="scab">마감</em>
+                                            <img src="./images/main/event-thumb4.jpg" alt="" />
+                                        </div>
+                                        <strong class="tit">[온라인 8월 공연] 꿈꾸는 쌩상</strong>
+                                        <p class="txt">접수 <span>|</span> 2021.09.19 ~ 2021.09.20</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //교육프로그램 -->
+            <script>
+                /*메인비주얼 슬라이드*/
+                $(".slide-program").slick({
+                    // fade: true,
+                    infinite: true,
+                    arrows: true,
+                    speed: 500,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    // autoplay: true,
+                });
+            </script>
+
+            <!-- 온라인으로 즐기는 전시관 -->
+            <div class="mGallery">
+                <div class="gallery-tit">
+                    <h2>온라인으로 즐기는 전시관</h2>
+                    <p>국립나주박물관의 상설전시실을 미리 체험해보아요!</p>
+                </div>
+
+                <div class="gallery-desc">
+                    <p class="txt">
+                        클릭하시면 VR파라노마를 통해 상설 전시실을 미리 보실 수 있습니다. <br />
+                        마우스 스크롤을 하면서 컨텐츠를 확인해 주세요.
+                    </p>
+                    <a href="#" class="link-line">온라인박물관 바로가기</a>
+                </div>
+                <div class="gallery-area">
+                    <div class="container">
+                        <ul class="gallery-road-g">
+                            <li class="gallery-road1">
+                                <a href="#" class="tit-area tit-1">
+                                    <h3 class="tit"><em>1F</em>제 1전시실</h3>
+                                    <p class="txt">영상강은 고대문화와 만나 설렘이 별빛처럼 쏟아지는 공간</p>
+                                    <span class="link- link-play">VR파노라마</span>
+                                </a>
+                                <ul class="road-step-area">
+                                    <li class="road-step1">
+                                        <img src="./images/main/gallery1-img1.png" alt="" />
+                                        <div class="txt">
+                                            <strong>역사의 여명</strong>
+                                            돌로 사냥하고 나무를 캐며, <br />
+                                            고기잡는 기술을 크게 발전
+                                        </div>
+                                    </li>
+                                    <li class="road-step2">
+                                        <img src="./images/main/gallery1-img2.png" alt="" />
+                                        <div class="txt">
+                                            농경의 발달과 <br />
+                                            <span>커지는 마을들</span>
+                                        </div>
+                                    </li>
+                                    <li class="road-step3">
+                                        <img src="./images/main/gallery1-img3.png" alt="" />
+                                        <div class="txt">
+                                            <strong>삼한의 중심, 마한</strong>
+                                            논밭을 갈고 곡식을 거두어 <br />
+                                            마을을 가꾸다
+                                        </div>
+                                    </li>
+                                    <li class="road-step4">
+                                        <img src="./images/main/gallery1-img4.png" alt="" />
+                                        <div class="txt">
+                                            <strong>영상강유역의 고분문화</strong>
+                                            커다란 독널은 지역의 독자적 문화로 발전
+                                        </div>
+                                    </li>
+                                    <li class="road-step5">
+                                        <img src="./images/main/gallery1-img5.png" alt="" />
+                                        <div class="txt">
+                                            물자의 교류는 <br />
+                                            성장의 동력
+                                        </div>
+                                    </li>
+                                    <li class="road-step6">
+                                        <img src="./images/main/gallery1-img6.png" alt="" />
+                                        <div class="txt">
+                                            <strong>강의 길, 바다의 길</strong>
+                                            영산강의 중심에 위치한 나주는 <br />
+                                            뱃길의 중심지
+                                        </div>
+                                    </li>
+                                    <li class="road-step7">
+                                        <img src="./images/main/gallery1-img7.png" alt="" />
+                                        <div class="txt">나주의 보물</div>
+                                    </li>
+                                </ul>
+                                <div class="tit-area tit-next">
+                                    <h3 class="tit"><em>B1</em>어린이전시실</h3>
+                                    <p class="txt">유치원, 초등학교 저학년 어린이들과 가족을 위한 공간</p>
+                                    <a href="#" class="link- link-goto">자세히보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //온라인으로 즐기는 전시관 -->
         </div>
         <!-- //메인 -->
 
@@ -690,7 +1602,7 @@
 
         <!-- Tooltip 관련 스크립트 & CSS -->
         <link href="/js/plugin/cluetip-1.0.6/jquery.cluetip.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="/js/plugin/cluetip-1.0.6/jquery.cluetip.js"></script>
+        <script src="/js/plugin/cluetip-1.0.6/jquery.cluetip.js"></script>
         <script type="text/javascript">
             jQuery(function () {
                 //jQuery('span[title]').cluetip({splitTitle: '|', arrows: true, dropShadow: true, mouseOutClose:    false,cluetipClass: 'jtip'});
