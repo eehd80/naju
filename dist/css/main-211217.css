@@ -924,12 +924,16 @@ legend {
   }
   .mProgram .tab-wrap .successiveTab button {
     padding: 8px 20px 8px 32px;
+    color: #222;
   }
-  .mProgram .tab-wrap .successiveTab button.active::before, .mProgram .tab-wrap .successiveTab button:hover::before {
+  .mProgram .tab-wrap .successiveTab button::before {
     left: 17px;
   }
-  .mProgram .tab-wrap .successiveTab button.active:after, .mProgram .tab-wrap .successiveTab button:hover:after {
-    bottom: 3px;
+  .mProgram .tab-wrap .successiveTab button:after {
+    bottom: 8px;
+  }
+  .mProgram .tab-wrap .successiveTab button.active::after {
+    bottom: 8px;
   }
   .mProgram .link-more {
     top: 11px;
@@ -952,7 +956,11 @@ legend {
   .mProgram .tab-wrap {
     margin-top: 0;
   }
-  .mProgram .tab-wrap .successiveTab button.active, .mProgram .tab-wrap .successiveTab button:hover {
+  .mProgram .tab-wrap .successiveTab {
+    margin-right: -2%;
+    margin-left: -2%;
+  }
+  .mProgram .tab-wrap .successiveTab button {
     padding: 6px 15px 6px 22px;
   }
 }

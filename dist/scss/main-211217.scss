@@ -822,13 +822,16 @@ legend {
             .successiveTab {
                 button {
                     padding: 8px 20px 8px 32px;
-                    &.active,
-                    &:hover {
-                        &::before {
-                            left: 17px;
-                        }
-                        &:after {
-                            bottom: 3px;
+                    color: $f;
+                    &::before {
+                        left: 17px;
+                    }
+                    &:after {
+                        bottom: 8px;
+                    }
+                    &.active {
+                        &::after {
+                            bottom: 8px;
                         }
                     }
                 }
@@ -855,11 +858,10 @@ legend {
         .tab-wrap {
             margin-top: 0;
             .successiveTab {
+                margin-right: -2%;
+                margin-left: -2%;
                 button {
-                    &.active,
-                    &:hover {
-                        padding: 6px 15px 6px 22px;
-                    }
+                    padding: 6px 15px 6px 22px;
                 }
             }
         }
